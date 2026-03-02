@@ -120,13 +120,15 @@ export default function VilaVelhaPage() {
       <header className="fixed top-0 w-full z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <Image
-              src="/images/logo-eletrotintas.png"
-              alt="Eletrotintas"
-              width={180}
-              height={60}
-              className="h-14 w-auto"
-            />
+            <Link href="/pagina-inicial">
+              <Image
+                src="/images/logo-eletrotintas.png"
+                alt="Eletrotintas"
+                width={180}
+                height={60}
+                className="h-14 w-auto"
+              />
+            </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
             <ScrollLink to="#inicio">Início</ScrollLink>
