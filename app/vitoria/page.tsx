@@ -647,7 +647,7 @@ export default function VitoriaPage() {
                       <Link href="#localizacao" className="text-gray-700 text-lg hover:text-gray-900 transition-colors">
                         Av. Leitão da Silva, 1451, lj. 1 - Vitória - ES
                       </Link>
-                      <p className="text-gray-500 text-sm mt-1">CEP: 29010-002</p>
+                      <p className="text-gray-500 text-sm mt-1">CEP: 29.046-010</p>
                     </div>
                   </div>
 
@@ -690,7 +690,7 @@ export default function VitoriaPage() {
                     <div>
                       <p className="font-bold text-gray-900 text-lg mb-1">Horário de Funcionamento:</p>
                       <p className="text-gray-700">Segunda a Sexta: 8h às 18h</p>
-                      <p className="text-gray-700">Sábado: 8h às 13h</p>
+                      <p className="text-gray-700">Sábado: 8h às 12h</p>
                       <p className="text-gray-500 text-sm mt-1">Domingos e feriados: fechado</p>
                     </div>
                   </div>
@@ -846,7 +846,7 @@ export default function VitoriaPage() {
                 </li>
                 <li className="flex items-center">
                   <Clock className="h-5 w-5 text-red-500 mr-3" />
-                  <span className="text-gray-300">Seg-Sex: 8h-18h | Sáb: 8h-13h</span>
+                  <span className="text-gray-300">Seg-Sex: 8h-18h | Sáb: 8h-12h</span>
                 </li>
               </ul>
             </div>

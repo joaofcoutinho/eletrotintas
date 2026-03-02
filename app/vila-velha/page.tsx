@@ -659,8 +659,8 @@ export default function VilaVelhaPage() {
                     </div>
                     <div>
                       <p className="font-bold text-gray-900 text-lg mb-1">Endereço:</p>
-                      <p className="text-gray-700 text-lg">Rua Henrique Moscoso, 1146 - Centro de Vila Velha - ES</p>
-                      <p className="text-gray-500 text-sm mt-1">CEP: 29100-540</p>
+                      <p className="text-gray-700 text-lg">Av. Henrique Moscoso, 1146 - Centro de Vila Velha - ES</p>
+                      <p className="text-gray-500 text-sm mt-1">CEP: 29100-020</p>
                     </div>
                   </div>
 
@@ -693,7 +693,7 @@ export default function VilaVelhaPage() {
                     <div>
                       <p className="font-bold text-gray-900 text-lg mb-1">Horário de Funcionamento:</p>
                       <p className="text-gray-700">Segunda a Sexta: 8h às 18h</p>
-                      <p className="text-gray-700">Sábado: 8h às 13h</p>
+                      <p className="text-gray-700">Sábado: 8h às 12h</p>
                       <p className="text-gray-500 text-sm mt-1">Domingos e feriados: fechado</p>
                     </div>
                   </div>
@@ -847,7 +847,7 @@ export default function VilaVelhaPage() {
                 <li className="flex items-start">
                   <MapPin className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
                   <ScrollLink to="#localizacao" className="text-gray-300 hover:text-white transition-colors">
-                    Rua Henrique Moscoso, 1146 - Centro de Vila Velha - ES
+                    Av. Henrique Moscoso, 1146 - Centro de Vila Velha - ES
                   </ScrollLink>
                 </li>
                 <li className="flex items-center">
@@ -867,7 +867,7 @@ export default function VilaVelhaPage() {
                 </li>
                 <li className="flex items-center">
                   <Clock className="h-5 w-5 text-red-500 mr-3" />
-                  <span className="text-gray-300">Seg-Sex: 8h-18h | Sáb: 8h-13h</span>
+                  <span className="text-gray-300">Seg-Sex: 8h-18h | Sáb: 8h-12h</span>
                 </li>
               </ul>
             </div>

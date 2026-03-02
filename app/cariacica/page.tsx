@@ -596,7 +596,7 @@ export default function CariacicaPage() {
                     <div>
                       <p className="font-bold text-gray-900 text-lg mb-1">Horário de Funcionamento:</p>
                       <p className="text-gray-700">Segunda a Sexta: 8h às 18h</p>
-                      <p className="text-gray-700">Sábado: 8h às 13h</p>
+                      <p className="text-gray-700">Sábado: 8h às 12h</p>
                       <p className="text-gray-500 text-sm mt-1">Domingos e feriados: fechado</p>
                     </div>
                   </div>
@@ -759,15 +759,15 @@ export default function CariacicaPage() {
                 <li className="flex items-center">
                   <Mail className="h-5 w-5 text-red-500 mr-3" />
                   <Link
-                    href="mailto:vitoria@eletromil.com.br"
+                    href="mailto:contato@eletrotintas.com.br"
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    vitoria@eletromil.com.br
+                    contato@eletrotintas.com.br
                   </Link>
                 </li>
                 <li className="flex items-center">
                   <Clock className="h-5 w-5 text-red-500 mr-3" />
-                  <span className="text-gray-300">Seg-Sex: 8h-18h | Sáb: 8h-13h</span>
+                  <span className="text-gray-300">Seg-Sex: 8h-18h | Sáb: 8h-12h</span>
                 </li>
               </ul>
             </div>

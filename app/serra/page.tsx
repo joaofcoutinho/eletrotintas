@@ -754,7 +754,7 @@ export default function SerraPage() {
                 </li>
                 <li className="flex items-center">
                   <Clock className="h-5 w-5 text-red-500 mr-3" />
-                  <span className="text-gray-300">Seg-Sex: 8h-18h | Sáb: 8h-13h</span>
+                  <span className="text-gray-300">Seg-Sex: 8h-18h | Sáb: 8h-12h</span>
                 </li>
               </ul>
             </div>
