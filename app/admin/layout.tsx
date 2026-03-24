@@ -2,23 +2,23 @@ import type React from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { cookies } from "next/headers"
-import { redirect } from "next/navigation"
+import { logoutAction } from "./actions"
 
 export const metadata: Metadata = {
   title: "Painel Administrativo | Eletrotintas",
   description: "Painel administrativo para gerenciamento de contatos da Eletrotintas",
 }
 
-export default function AdminLayout({
+export default async function AdminLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  // Verifica se estamos na página principal do admin (login)
-  const isLoginPage = typeof window !== "undefined" && window.location.pathname === "/admin"
+  const cookieStore = await cookies()
+  const isAuthenticated = cookieStore.has("admin_authenticated")
 
-  // Se for a página de login, não mostra o header
-  if (isLoginPage) {
+  // Página de login: sem header
+  if (!isAuthenticated) {
     return <>{children}</>
   }
 
@@ -40,13 +40,7 @@ export default function AdminLayout({
                 </Link>
               </li>
               <li>
-                <form
-                  action={async () => {
-                    "use server"
-                    cookies().set("admin_authenticated", "", { expires: new Date(0) })
-                    redirect("/admin")
-                  }}
-                >
+                <form action={logoutAction}>
                   <button type="submit" className="hover:underline">
                     Sair
                   </button>

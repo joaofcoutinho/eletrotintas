@@ -1,17 +1,15 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
-import { useRouter } from "next/navigation"
 import Image from "next/image"
+import { loginAction } from "./actions"
 
 export default function AdminLogin() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -19,15 +17,13 @@ export default function AdminLogin() {
     setError("")
 
     try {
-      // Verificação simples de credenciais
-      if (username === "eletrotintas" && password === "eletrotintas") {
-        // Salva um cookie para indicar que o usuário está autenticado
-        document.cookie = "admin_authenticated=true; path=/; max-age=86400" // 24 horas
-        router.push("/admin/dashboard")
-      } else {
-        setError("Credenciais inválidas")
+      const result = await loginAction(username, password)
+      if (result?.error) {
+        setError(result.error)
       }
-    } catch (err) {
+    } catch (err: any) {
+      // redirect() lança um erro internamente no Next.js — ignorar
+      if (err?.digest?.startsWith("NEXT_REDIRECT")) return
       setError("Ocorreu um erro ao fazer login")
       console.error(err)
     } finally {
@@ -50,7 +46,11 @@ export default function AdminLogin() {
 
         <h1 className="text-2xl font-bold text-center mb-6">Painel Administrativo</h1>
 
-        {error && <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">{error}</div>}
+        {error && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+            {error}
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
