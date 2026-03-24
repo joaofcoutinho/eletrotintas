@@ -558,7 +558,7 @@ export default function SerraPage() {
             {/* Map */}
             <div className="shadow-lg rounded-xl overflow-hidden animate-fade-in">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.499792944978!2d-40.2587523!3d-20.1807434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83d7a8a9d9d5%3A0x1c680e6686b4b6b0!2sAv.%20Des.%20M%C3%A1rio%20da%20Silva%20Nunes%2C%2088%20-%20Jardim%20Limoeiro%2C%20Serra%20-%20ES!5e0!3m2!1spt-BR!2sbr!4v1684158137422!5m2!1spt-BR!2sbr!4v1684158137422!5m2!1spt-BR!2sbr"
+                src="https://maps.google.com/maps?q=Av.+Des.+M%C3%A1rio+da+Silva+Nunes%2C+88%2C+Jardim+Limoeiro%2C+Serra%2C+ES%2C+Brasil&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}

@@ -503,7 +503,7 @@ export default function CariacicaPage() {
             <div className="lg:w-1/2 flex flex-col">
               <div className="rounded-2xl overflow-hidden shadow-2xl h-full animate-fade-in animate-delay-100 transform transition-all duration-500 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.5222222222223!2d-40.39722!3d-20.31111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83fd7a8a9d9d5%3A0x1c680e6686b4b6b0!2sAv.%20M%C3%A1rio%20Gurgel%2C%20464%20-%20Campo%20Grande%2C%20Cariacica%20-%20ES%2C%2029146-440!5e0!3m2!1spt-BR!2sbr!4v1714933374123!5m2!1spt-BR!2sbr"
+                  src="https://maps.google.com/maps?q=Av.+M%C3%A1rio+Gurgel%2C+4640%2C+Vila+Capixaba%2C+Cariacica%2C+ES%2C+Brasil&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="600"
                   height="500"
                   style={{ border: 0 }}

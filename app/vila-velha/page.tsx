@@ -602,7 +602,7 @@ export default function VilaVelhaPage() {
             <div className="lg:w-1/2 flex flex-col">
               <div className="rounded-2xl overflow-hidden shadow-2xl h-full animate-fade-in animate-delay-100 transform transition-all duration-500 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.5222222222223!2d-40.2923017!3d-20.3349951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83fd7a8a9d9d5%3A0x1c680e6686b4b6b0!2sAv.%20Champagnat%2C%20Vila%20Velha%20-%20ES!5e0!3m2!1spt-BR!2sbr!4v1714933374123!5m2!1spt-BR!2sbr"
+                  src="https://maps.google.com/maps?q=Av.+Henrique+Moscoso%2C+1146%2C+Centro%2C+Vila+Velha%2C+ES%2C+Brasil&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="600"
                   height="500"
                   style={{ border: 0 }}
