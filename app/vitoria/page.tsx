@@ -7,6 +7,7 @@ import AnimatedBackground from "@/components/animated-background"
 import BrandCarousel from "@/components/brand-carousel"
 import TestimonialCarousel from "@/components/testimonial-carousel"
 import WhatsAppButton from "@/components/whatsapp-button"
+import WhatsAppLink from "@/components/whatsapp-link"
 import NavLink from "@/components/nav-link"
 
 // Atualizar os testimonials para incluir rating
@@ -264,15 +265,14 @@ export default function VitoriaPage() {
                 />
               </div>
 
-              <a
+              <WhatsAppLink
                 href="https://wa.me/5527992984038"
-                target="_blank"
-                rel="noopener noreferrer"
+                store="vitoria"
                 className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg z-20 animate-float flex items-center gap-2"
               >
                 <Phone className="h-4 w-4" />
                 Visite Nossa Loja!
-              </a>
+              </WhatsAppLink>
             </div>
           </div>
         </div>

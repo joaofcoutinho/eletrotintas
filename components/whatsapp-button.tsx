@@ -4,6 +4,12 @@ import type React from "react"
 import { useState } from "react"
 import MiniChatbot from "./mini-chatbot"
 
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[]
+  }
+}
+
 interface WhatsAppButtonProps {
   phoneNumber: string
   store: string // Prop para identificar a loja
@@ -22,16 +28,21 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ phoneNumber, store }) =
   const cleanNumber = phoneNumber.replace(/\D/g, "")
 
   const handleChatbotComplete = (userData: UserData) => {
-    // Construct message with user data
     const message = `Olá, meu nome é ${userData.name}. Email: ${userData.email}. Telefone: ${userData.phone}. Gostaria de mais informações sobre os produtos da Eletrotintas.`
-
-    // Encode the message for URL
     const encodedMessage = encodeURIComponent(message)
 
-    // Close chatbot
+    // Dispara evento de conversão no GTM
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: "whatsapp_conversion",
+      whatsapp_store: store,
+      whatsapp_trigger: "floating_button",
+      lead_name: userData.name,
+      lead_phone: userData.phone,
+    })
+
     setShowChatbot(false)
 
-    // Open WhatsApp with pre-filled message after a short delay
     setTimeout(() => {
       window.open(`https://wa.me/55${cleanNumber}?text=${encodedMessage}`, "_blank")
     }, 500)
@@ -40,7 +51,15 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ phoneNumber, store }) =
   return (
     <>
       <button
-        onClick={() => setShowChatbot(true)}
+        onClick={() => {
+          window.dataLayer = window.dataLayer || []
+          window.dataLayer.push({
+            event: "whatsapp_chatbot_open",
+            whatsapp_store: store,
+            whatsapp_trigger: "floating_button",
+          })
+          setShowChatbot(true)
+        }}
         className="fixed bottom-6 right-6 z-50 group"
         aria-label={`Contato via WhatsApp: ${phoneNumber}`}
       >
