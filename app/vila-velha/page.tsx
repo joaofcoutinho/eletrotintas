@@ -632,7 +632,7 @@ export default function VilaVelhaPage() {
               <div className="overflow-hidden rounded-2xl shadow-2xl animate-fade-in animate-delay-200 group">
                 <div className="relative h-[300px] overflow-hidden">
                   <Image
-                    src="/images/nossas-lojas-vila-velha.png"
+                    src="/images/faixada-vilavelha.jpeg"
                     alt="Fachada ELETROMIL Vila Velha"
                     fill
                     className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110"
