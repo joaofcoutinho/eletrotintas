@@ -169,7 +169,7 @@ export default function HomePage() {
               <div className="bg-white/10 backdrop-blur-md rounded-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border border-white/20 group">
                 <div className="relative h-48">
                   <Image
-                    src="/images/nossas-lojas-vila-velha.png"
+                    src="/images/faxada-nova.jpeg"
                     alt="Eletrotintas Vila Velha"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
