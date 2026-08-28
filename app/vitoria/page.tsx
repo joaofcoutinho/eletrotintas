@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin, Phone, Mail, Clock, ChevronRight, Star, ExternalLink, ArrowRight, Building } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, ChevronRight, Star, ExternalLink, ArrowRight, Building, FileText } from "lucide-react"
 import ScrollToTop from "@/components/scroll-to-top"
 import AnimatedBackground from "@/components/animated-background"
 // Substituir a importação de BrandCard por BrandCarousel
@@ -854,7 +854,16 @@ export default function VitoriaPage() {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-800 text-center">
+          <div className="mt-12 pt-8 border-t border-gray-800 text-center flex flex-col items-center gap-4">
+            <a
+              href="/regulamento-campanha-renner.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors underline underline-offset-4 decoration-gray-600 hover:decoration-white"
+            >
+              <FileText className="h-4 w-4 text-red-400" />
+              Regulamento Oficial - Campanha Renner
+            </a>
             <p className="text-gray-400">&copy; {new Date().getFullYear()} ELETROMIL. Todos os direitos reservados.</p>
           </div>
         </div>
